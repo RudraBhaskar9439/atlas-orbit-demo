@@ -1,0 +1,317 @@
+{
+  "scope": "public",
+  "entities": [
+    {
+      "id": "od-maya",
+      "kind": "Person",
+      "title": "Maya Chen \u00b7 recording sample",
+      "properties": {
+        "synthetic": true,
+        "role": "Authentication owner"
+      }
+    },
+    {
+      "id": "od-noah",
+      "kind": "Person",
+      "title": "Noah Williams \u00b7 recording sample",
+      "properties": {
+        "synthetic": true,
+        "role": "Backend engineer"
+      }
+    },
+    {
+      "id": "od-leo",
+      "kind": "Person",
+      "title": "Leo Kim \u00b7 recording sample",
+      "properties": {
+        "synthetic": true,
+        "role": "Billing owner"
+      }
+    },
+    {
+      "id": "od-zara",
+      "kind": "Person",
+      "title": "Zara Patel \u00b7 recording sample",
+      "properties": {
+        "synthetic": true,
+        "role": "Launch decision owner"
+      }
+    },
+    {
+      "id": "od-team",
+      "kind": "Team",
+      "title": "Orbit recording team",
+      "properties": {
+        "synthetic": true
+      }
+    },
+    {
+      "id": "od-repository",
+      "kind": "Repository",
+      "title": "Orbit demo API",
+      "properties": {
+        "synthetic": true,
+        "url": "https://github.com/RudraBhaskar9439/atlas-orbit-demo"
+      }
+    },
+    {
+      "id": "od-project",
+      "kind": "Project",
+      "title": "Orbit recording launch",
+      "properties": {
+        "synthetic": true
+      }
+    },
+    {
+      "id": "od-auth",
+      "kind": "Module",
+      "title": "Authentication \u00b7 recording sample",
+      "properties": {
+        "synthetic": true,
+        "path": "auth.py"
+      }
+    },
+    {
+      "id": "od-billing",
+      "kind": "Module",
+      "title": "Billing \u00b7 recording sample",
+      "properties": {
+        "synthetic": true,
+        "path": "billing.py"
+      }
+    },
+    {
+      "id": "od-auth-change",
+      "kind": "Change",
+      "title": "Synthetic refresh-token rotation change",
+      "properties": {
+        "synthetic": true,
+        "commit": "synthetic-demo-record"
+      }
+    },
+    {
+      "id": "od-coverage-task",
+      "kind": "Ticket",
+      "title": "Add replay-test coverage \u00b7 sample assignment",
+      "properties": {
+        "synthetic": true,
+        "status": "in_progress"
+      }
+    },
+    {
+      "id": "od-launch",
+      "kind": "Decision",
+      "title": "Approve Orbit recording launch",
+      "properties": {
+        "synthetic": true
+      }
+    },
+    {
+      "id": "od-enable-billing",
+      "kind": "Decision",
+      "title": "Enable annual billing \u00b7 recording sample",
+      "properties": {
+        "synthetic": true
+      }
+    },
+    {
+      "id": "od-auth-fact",
+      "kind": "Fact",
+      "title": "Auth verification passes",
+      "properties": {
+        "synthetic": true,
+        "field": "result",
+        "equals": "passed"
+      }
+    },
+    {
+      "id": "od-billing-fact",
+      "kind": "Fact",
+      "title": "Billing verification passes",
+      "properties": {
+        "synthetic": true,
+        "field": "result",
+        "equals": "passed"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "OD-TEAM",
+      "title": "Synthetic team handoff",
+      "content": "Fictional recording data: Maya owns authentication. Noah authored the sample refresh-token change. Leo owns billing. Zara owns the launch decision.",
+      "metadata": {
+        "synthetic": true,
+        "type": "document"
+      }
+    },
+    {
+      "id": "OD-AUTH-REVIEW",
+      "title": "Synthetic auth review",
+      "content": "Fictional review record: Noah Williams authored the sample token-rotation change in auth.py; Maya Chen reviewed it. This is not GitHub contributor metadata.",
+      "metadata": {
+        "synthetic": true,
+        "type": "sample_review",
+        "author": "Noah Williams",
+        "reviewer": "Maya Chen"
+      }
+    },
+    {
+      "id": "OD-ASSIGNMENT",
+      "title": "Synthetic current assignment",
+      "content": "Fictional team assignment: Noah Williams is working on replay-test coverage. This records an assignment and does not infer live employee activity.",
+      "metadata": {
+        "synthetic": true,
+        "type": "ticket",
+        "assignee": "Noah Williams",
+        "status": "in_progress"
+      }
+    },
+    {
+      "id": "OD-AUTH-VERIFY",
+      "title": "Synthetic authentication verification",
+      "content": "Synthetic authentication verification passed.",
+      "metadata": {
+        "synthetic": true,
+        "type": "verification",
+        "result": "passed"
+      }
+    },
+    {
+      "id": "OD-BILLING-VERIFY",
+      "title": "Synthetic billing verification",
+      "content": "Synthetic billing verification passed. The separate seeded half-cent bug has not yet been covered.",
+      "metadata": {
+        "synthetic": true,
+        "type": "verification",
+        "result": "passed"
+      }
+    },
+    {
+      "id": "OD-LAUNCH-PLAN",
+      "title": "Synthetic launch decision plan",
+      "content": "Zara owns the launch decision. It depends on authentication verification passing. Leo owns the separate billing decision, which depends only on billing verification. Failed conditions request human review rather than automatically cancelling a launch.",
+      "metadata": {
+        "synthetic": true,
+        "type": "document"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source": "od-maya",
+      "target": "od-team",
+      "kind": "MEMBER_OF"
+    },
+    {
+      "source": "od-noah",
+      "target": "od-team",
+      "kind": "MEMBER_OF"
+    },
+    {
+      "source": "od-leo",
+      "target": "od-team",
+      "kind": "MEMBER_OF"
+    },
+    {
+      "source": "od-zara",
+      "target": "od-team",
+      "kind": "MEMBER_OF"
+    },
+    {
+      "source": "od-maya",
+      "target": "od-auth",
+      "kind": "OWNS"
+    },
+    {
+      "source": "od-leo",
+      "target": "od-billing",
+      "kind": "OWNS"
+    },
+    {
+      "source": "od-zara",
+      "target": "od-launch",
+      "kind": "OWNS"
+    },
+    {
+      "source": "od-leo",
+      "target": "od-enable-billing",
+      "kind": "OWNS"
+    },
+    {
+      "source": "od-noah",
+      "target": "od-auth-change",
+      "kind": "AUTHORED"
+    },
+    {
+      "source": "od-auth-change",
+      "target": "od-auth",
+      "kind": "MODIFIES"
+    },
+    {
+      "source": "od-auth-change",
+      "target": "OD-AUTH-REVIEW",
+      "kind": "CITES"
+    },
+    {
+      "source": "od-maya",
+      "target": "OD-AUTH-REVIEW",
+      "kind": "REVIEWS"
+    },
+    {
+      "source": "od-noah",
+      "target": "od-coverage-task",
+      "kind": "ASSIGNED_TO"
+    },
+    {
+      "source": "od-coverage-task",
+      "target": "OD-ASSIGNMENT",
+      "kind": "CITES"
+    },
+    {
+      "source": "od-repository",
+      "target": "od-auth",
+      "kind": "USES"
+    },
+    {
+      "source": "od-repository",
+      "target": "od-billing",
+      "kind": "USES"
+    },
+    {
+      "source": "od-auth",
+      "target": "od-project",
+      "kind": "SUPPORTS"
+    },
+    {
+      "source": "od-billing",
+      "target": "od-project",
+      "kind": "SUPPORTS"
+    },
+    {
+      "source": "od-launch",
+      "target": "od-auth-fact",
+      "kind": "DEPENDS_ON"
+    },
+    {
+      "source": "od-auth-fact",
+      "target": "OD-AUTH-VERIFY",
+      "kind": "CITES"
+    },
+    {
+      "source": "od-enable-billing",
+      "target": "od-billing-fact",
+      "kind": "DEPENDS_ON"
+    },
+    {
+      "source": "od-billing-fact",
+      "target": "OD-BILLING-VERIFY",
+      "kind": "CITES"
+    },
+    {
+      "source": "od-launch",
+      "target": "OD-LAUNCH-PLAN",
+      "kind": "CITES"
+    }
+  ]
+}
